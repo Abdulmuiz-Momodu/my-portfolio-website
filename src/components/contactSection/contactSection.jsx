@@ -7,12 +7,6 @@ export default function ContactSection() {
         <h2 className="text-base min-[25rem]:text-2xl md:text-4xl font-bold pb-2">
           Let's Work Together
         </h2>
-
-        {/* <p className="text-center mb-12 max-w-xl mx-auto">
-          I'm currently open to frontend development roles (full-time or part-time), freelance projects,
-          and creative collaborations. Whether you're hiring, building something
-          exciting, or just want to connect — feel free to drop me a message!
-        </p> */}
         <div className="max-w-[40rem]">
           <p>
             I’m currently available for{" "}
