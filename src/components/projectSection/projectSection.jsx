@@ -6,7 +6,7 @@ export default function ProjectSection() {
       title: "Audiophile Website",
       description:
         "A visually engaging and responsive website designed for showcasing audio gear products. The site features a clean, modern layout with intuitive navigation and detailed product pages, making it ideal for e-commerce-style product displays. Built to reflect a premium brand feel with smooth interactions.",
-      tech: ["Next.js", "Zustand", "Tailwind CSS"],
+      tech: ["Next.js", "Zustand", "CSS", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/audiophile-website",
       live: "https://drixel-audiophile-website.vercel.app/",
       image: (
@@ -57,11 +57,6 @@ export default function ProjectSection() {
             </h2>
             <div className="w-1/2 min-[30rem]:w-3/5 md:w-1/3 h-[1px] bg-[#A9AABC]"></div>
           </div>
-
-          {/* <p className="text-center text-[#A9AABC] mb-12 max-w-xl mx-auto">
-            Here are some of the personal and collaborative projects I’ve worked
-            on recently.
-          </p> */}
 
           <div className="flex flex-col gap-12 md:gap-24">
             {projects.map((project, index) => (
