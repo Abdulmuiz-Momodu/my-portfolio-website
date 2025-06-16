@@ -9,7 +9,11 @@ export default function ProjectSection() {
       tech: ["Next.js", "Zustand", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/audiophile-website",
       live: "https://drixel-audiophile-website.vercel.app/",
-      image: <div className="projectOne"><div></div></div>,
+      image: (
+        <div className="projectOne">
+          <div></div>
+        </div>
+      ),
     },
     {
       title: "Product-List-With-Cart",
@@ -18,7 +22,11 @@ export default function ProjectSection() {
       tech: ["React", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/Product-Lists-with-Cart",
       live: "https://mypher-product-lists-with-cart.netlify.app/",
-      image: <div className="projectTwo"><div></div></div>,
+      image: (
+        <div className="projectTwo">
+          <div></div>
+        </div>
+      ),
     },
     {
       title: "Rock-Paper-Scissors",
@@ -27,7 +35,11 @@ export default function ProjectSection() {
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Abdulmuiz-Momodu/Rock-Paper-Scissors",
       live: "https://mypher-rock-paper-scissor.netlify.app/",
-      image: <div className="projectThree"><div></div></div>,
+      image: (
+        <div className="projectThree">
+          <div></div>
+        </div>
+      ),
     },
   ];
 
@@ -53,7 +65,10 @@ export default function ProjectSection() {
 
           <div className="flex flex-col gap-12 md:gap-24">
             {projects.map((project, index) => (
-              <div key={index} className="flex flex-col md:flex-row lg:h-[25rem]">
+              <div
+                key={index}
+                className="flex flex-col md:flex-row lg:h-[25rem]"
+              >
                 <div className="projectImage">{project.image}</div>
 
                 <div className="md:w-[30%] flex items-center projectInfo">
@@ -82,18 +97,14 @@ export default function ProjectSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          className="w-5"
-                          src="./go-live.png"
-                          alt="go-live"
-                        />
+                        <div className="go-live socialLinks w-5 h-5"></div>
                       </a>
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img className="w-5" src="./github.png" alt="github" />
+                        <div className="github socialLinks w-5 h-5"></div>
                       </a>
                     </div>
                   </div>

@@ -17,8 +17,8 @@ export default function Contact() {
               </a>
             </li>
             <li>
-              <a href="tel:+2347045912062">
-                <div className="phone socialLinks w-5 h-5"></div>
+              <a href="https://wa.me/+2347045912062"  target="_blank">
+                <div className="whatsapp socialLinks w-5 h-5"></div>
               </a>
             </li>
           </ul>

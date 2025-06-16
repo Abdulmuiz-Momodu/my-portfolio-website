@@ -14,7 +14,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-1/2 min-[30rem]:w-3/5 md:w-1/3 h-[1px] bg-[#A9AABC]"></div>
         </div>
-        <section className="flex flex-col items-center  md:flex-row gap-10 md:gap-16">
+        <section className="flex flex-col items-center  md:flex-row gap-10 md:gap-0">
           <div className="w-full md:max-w-3/5 flex flex-col gap-8 md:gap-16">
             <div className="text-[#A9AABC] flex flex-col gap-4">
               <p className="text-base leading-relaxed">
@@ -57,11 +57,11 @@ export default function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="w-2/5 md:w-[30%]">
+          <div className="md:w-[40%]">
             <img
               className="bitmoji w-full cursor-pointer"
-              src="./bitmoji.png"
-              alt="bitmoji"
+              src="./image.png"
+              alt="image"
             />
           </div>
         </section>

@@ -108,14 +108,20 @@
   background-position: center;
   cursor: pointer;
 }
+.go-live {
+  background-image: url("/go-live.png");
+}
 .github {
   background-image: url("/github.png");
 }
 .linkedin {
   background-image: url("/linkedin.png");
 }
-.phone {
-  background-image: url("/phone.png");
+.whatsapp {
+  background-image: url("/whatsapp.png");
+}
+.go-live:hover {
+  background-image: url("/go-live-hover.png");
 }
 .github:hover {
   background-image: url("/github-hover.png");  
@@ -123,8 +129,8 @@
 .linkedin:hover {
   background-image: url("/linkedin-hover.png");  
 }
-.phone:hover {
-  background-image: url("/phone-hover.png");  
+.whatsapp:hover {
+  background-image: url("/whatsapp-hover.png");  
 }
 .bar1, .bar2, .bar3 {
   transition: 0.4s;
