@@ -89,13 +89,13 @@
   background-position: center;
 }
 .projectOne div {
-  background-image: url("/audiophile.png");
+  background-image: url("/audiophile-desktop.png");
 }
 .projectTwo div {
-  background-image: url("/product-list-with-cart.png");
+  background-image: url("/product-list-with-cart-desktop.png");
 }
 .projectThree div {
-  background-image: url("/rock-paper-scissors.png");
+  background-image: url("/rock-paper-scissors-desktop.png");
 }
 .projectOne div:hover,
 .projectTwo div:hover,
@@ -126,17 +126,6 @@
 .phone:hover {
   background-image: url("/phone-hover.png");  
 }
-::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-}
-::-webkit-scrollbar-thumb {
-  background: #f2b880;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
 .bar1, .bar2, .bar3 {
   transition: 0.4s;
 }
@@ -154,6 +143,17 @@
 .close-button {
   padding: 2rem;
 }
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f2b880;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 @media screen and (max-width: 900px) {
   .sectionskills {
@@ -167,7 +167,7 @@
   .sectionProject,
   .sectionServices,
   .contact {
-    padding: 3.5rem;
+    padding: 7rem 3.5rem;
   }
   .sectionContact {
     padding: 10rem 3.5rem;
@@ -188,13 +188,13 @@
     background-repeat: no-repeat;
   }
   .projectOne {
-    background-image: url("/audiophile.png");
+    background-image: url("/audiophile-tablet.png");
   }
   .projectTwo {
-    background-image: url("/product-list-with-cart.png");
+    background-image: url("/product-list-with-cart-tablet.png");
   }
   .projectThree {
-    background-image: url("/rock-paper-scissors.png");
+    background-image: url("/rock-paper-scissors-tablet.png");
   }
   .projectImage {
     width: 100%;
@@ -232,5 +232,14 @@
   }
   .projectContent {
     margin-top: -35rem;
+  }
+  .projectOne {
+    background-image: url("/audiophile-mobile.png");
+  }
+  .projectTwo {
+    background-image: url("/product-list-with-cart-mobile.png");
+  }
+  .projectThree {
+    background-image: url("/rock-paper-scissors-mobile.png");
   }
 }

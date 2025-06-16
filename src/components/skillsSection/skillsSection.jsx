@@ -6,7 +6,7 @@ export default function SkillsSection() {
       <section className="text-[#E4D9FF]">
         <div className="max-w-5xl mx-auto space-y-20">
           <div className="min-w-3/5 flex flex-col gap-16">
-            <div className="flex items-center gap-8">
+            <div className="flex items-center justify-between md:gap-8">
               <h2 className="text-[#E4D9FF] text-[1rem] min-[25rem]:text-2xl md:text-4xl font-bold pb-2">
                 <span className="text-[#F2B880] text-[10px] min-[25rem]:text-[1rem] md:text-2xl">
                   {" "}

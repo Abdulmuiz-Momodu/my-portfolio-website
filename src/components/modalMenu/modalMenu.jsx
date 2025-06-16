@@ -1,74 +1,63 @@
-'use client';
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useRef } from "react";
 
-export default function ModalMenu({ closeModal }) {
-  
-  const resetMenu = () => {
-    const menuButton = document.querySelector("button .bar1");
-    if (menuButton) {
-      menuButton.parentElement.classList.remove("change");  // Reset menu to bars
+export default function ModalMenu({ isOpen, onClose }) {
+  const drawerRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  useEffect(() => {
+    const drawer = drawerRef.current;
+
+    const handleTouchStart = (e) => {
+      touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+      touchEndX.current = e.touches[0].clientX;
+    };
+
+    // Swiped left to close
+    const handleTouchEnd = () => {
+      if (touchStartX.current - touchEndX.current < 50) {
+        onClose();
+      }
+    };
+
+    if (drawer) {
+      drawer.addEventListener("touchstart", handleTouchStart);
+      drawer.addEventListener("touchmove", handleTouchMove);
+      drawer.addEventListener("touchend", handleTouchEnd);
     }
-    closeModal();  // Close the modal
-  };
+
+    return () => {
+      if (drawer) {
+        drawer.removeEventListener("touchstart", handleTouchStart);
+        drawer.removeEventListener("touchmove", handleTouchMove);
+        drawer.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, [onClose]);
 
   return (
-    <div className="section flex flex-col gap-16 pt-28 w-full h-[20rem] overflow-auto">
-      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
-        <div className="flex flex-col items-center -mt-12">
-          <img className="h-28" src="./headphone-nobg.png" alt="headphone-1" />
-          <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />
-        </div>
-        <div className="flex flex-col items-center gap-[13px]">
-          <h4 className="font-medium">HEADPHONES</h4>
-          <Link
-            className="flex items-center gap-[10px]"
-            href="/headphone"
-            onClick={resetMenu}
-          >
-            <p className="text-sm text-gray-500 font-medium hover:text-[#D87D4A]">
-              SHOP
-            </p>
-            <img className="h-[10px]" src="./icon-arrow.png" alt="icon-arrow" />
-          </Link>
-        </div>
-      </div>
-      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
-        <div className="flex flex-col items-center -mt-12">
-          <img className="h-28" src="./speaker-nobg.png" alt="speaker-nobg" />
-          <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />
-        </div>
-        <div className="flex flex-col items-center gap-[13px]">
-          <h4 className="font-medium">SPEAKERS</h4>
-          <Link
-            className="flex items-center gap-[10px]"
-            href="/speaker"
-            onClick={resetMenu}
-          >
-            <p className="text-sm text-gray-500 font-medium hover:text-[#D87D4A]">
-              SHOP
-            </p>
-            <img className="h-[10px]" src="./icon-arrow.png" alt="icon-arrow" />
-          </Link>
-        </div>
-      </div>
-      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
-        <div className="flex flex-col items-center -mt-12">
-          <img className="h-28" src="./earphone-nobg.png" alt="earphone-nobg" />
-          <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />
-        </div>
-        <div className="flex flex-col items-center gap-[13px]">
-          <h4 className="font-medium">EARPHONES</h4>
-          <Link
-            className="flex items-center gap-[10px]"
-            href="/earphone"
-            onClick={resetMenu}
-          >
-            <p className="text-sm text-gray-500 font-medium hover:text-[#D87D4A]">
-              SHOP
-            </p>
-            <img className="h-[10px]" src="./icon-arrow.png" alt="icon-arrow" />
-          </Link>
+    <div
+      ref={drawerRef}
+      className={`fixed top-0 right-0 flex justify-end h-full w-full backdrop-blur-xs text-white shadow-lg z-50 transform duration-[500ms] ease-in-out md:hidden ${
+        isOpen ? "translate-x-0" : "translate-x-full"
+      }`}
+    >
+      <div className="h-full w-3/5 flex flex-col items-center justify-center gap-20 bg-[#1a1423]">
+        <ul className="flex flex-col gap-6 tracking-wide text-lg">
+          {["About", "Skills", "Projects", "Services"].map((item, i) => (
+            <li key={i} onClick={onClose} className="hover:text-[#F2B880]">
+              <a className="flex flex-col items-center" href={`#${item.toLowerCase()}`}>
+                <span className="text-[13px] text-[#F2B880]">0{i + 1}.</span>{" "}
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="contactButton border-[1px] rounded-[3px] text-[#F2B880] font-medium border-[#F2B880] px-3 py-1">
+          <a onClick={onClose} href="#contact">Contact</a>
         </div>
       </div>
     </div>

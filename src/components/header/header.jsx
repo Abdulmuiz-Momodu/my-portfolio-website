@@ -1,23 +1,25 @@
 "use client";
 import React, { useRef, useState } from "react";
-import DrawerMenu from "@/components/drawerMenu/drawerMenu"; // 👈 import the component
+import DrawerMenu from "@/components/modalMenu/modalMenu";
+import ModalMenu from "@/components/modalMenu/modalMenu";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const toggleMenu = () => {
-    if (menuRef.current) {
-      menuRef.current.classList.toggle("change");
+    if (buttonRef.current) {
+      buttonRef.current.classList.toggle("change");
     }
   };
 
   const handleDrawerClose = () => {
-    if (menuRef.current) {
-      menuRef.current.classList.remove("change");
-    }
-    setIsDrawerOpen(false);
-  };
+  if (buttonRef.current) {
+    buttonRef.current.classList.remove("change");
+  }
+  setIsDrawerOpen(false);
+};
+
 
   return (
     <div className="sticky top-0 w-full bg-inherit z-50">
@@ -31,7 +33,7 @@ export default function Header() {
           {/* Desktop menu */}
           <div className="hidden md:flex gap-8 items-center">
             <ul className="flex gap-6">
-              {["About", "Skills", "Work", "Services"].map((text, i) => (
+              {["About", "Skills", "Projects", "Services"].map((text, i) => (
                 <li key={i} className="hover:text-[#F2B880]">
                   <a href={`#${text.toLowerCase()}`}>
                     <span className="text-[13px] text-[#F2B880]">0{i + 1}.</span>{" "}
@@ -45,23 +47,24 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Hamburger for mobile */}
+          {/*Mobile Menu-button*/}
           <button
-            ref={menuRef}
+            ref={buttonRef}
             onClick={() => {
               toggleMenu();
-              setIsDrawerOpen(true);
+              setIsDrawerOpen((prev) => !prev);
             }}
-            className="flex flex-col items-end gap-[5px] cursor-pointer md:hidden"
+            className="drawer-toggle z-[100] flex flex-col items-end gap-[5px] cursor-pointer md:hidden"
           >
-            <div className="bg-[#F2B880] h-0.5 w-8 bar1" />
-            <div className="bg-[#F2B880] h-0.5 w-7 bar2" />
-            <div className="bg-[#F2B880] h-0.5 w-6 bar3" />
+            <div className="bar1 bg-[#F2B880] h-0.5 w-8" />
+            <div className="bar2 bg-[#F2B880] h-0.5 w-7" />
+            <div className="bar3 bg-[#F2B880] h-0.5 w-6" />
           </button>
+
         </div>
       </div>
-      {/* Mobile Drawer */}
-      <DrawerMenu isOpen={isDrawerOpen} onClose={handleDrawerClose} />
+      {/* Mobile Menu */}
+      <ModalMenu isOpen={isDrawerOpen} onClose={handleDrawerClose} />
     </div>
   );
 }
