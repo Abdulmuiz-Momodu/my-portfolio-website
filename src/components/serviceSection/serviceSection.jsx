@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SectionServices() {
+export default function ServiceSection() {
   return (
     <div id="services" className="sectionServices">
       <section className="text-[#E4D9FF]">

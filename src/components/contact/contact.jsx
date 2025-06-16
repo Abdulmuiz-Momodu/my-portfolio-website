@@ -8,17 +8,17 @@ export default function Contact() {
           <ul className="flex justify-around w-3xs md:w-fit md:flex-col md:gap-10">
             <li>
               <a href="https://github.com/Abdulmuiz-Momodu">
-                <img className="w-5" src="./github.png" alt="github" />
+                <div className="github socialLinks w-5 h-5"></div>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/muiz-momodu">
-                <img className="w-5" src="./linkedin.png" alt="linkedin" />
+                <div className="linkedin socialLinks w-5 h-5"></div>
               </a>
             </li>
             <li>
               <a href="tel:+2347045912062">
-                <img className="w-5" src="./phone.png" alt="phone" />
+                <div className="phone socialLinks w-5 h-5"></div>
               </a>
             </li>
           </ul>

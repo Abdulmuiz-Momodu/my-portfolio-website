@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SectionSkills() {
+export default function SkillsSection() {
   return (
     <div id="skills" className="sectionskills">
       <section className="text-[#E4D9FF]">

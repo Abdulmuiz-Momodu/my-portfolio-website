@@ -1,4 +1,6 @@
-export default function SectionContact() {
+import React from 'react'
+
+export default function ContactSection() {
   return (
     <div className="text-[#E4D9FF] sectionContact" id="contact">
       <section className="flex flex-col gap-8 items-center text-center">

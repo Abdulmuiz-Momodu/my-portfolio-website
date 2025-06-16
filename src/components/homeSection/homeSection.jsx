@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SectionHome() {
+export default function HomeSection() {
   return (
     <section className="sectionHome md:min-h-[85vh] md:  pl-12">
       <div className="w-full lg:max-w-4/5 flex flex-col gap-4">

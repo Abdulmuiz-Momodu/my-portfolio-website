@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SectionAbout() {
+export default function AboutSection() {
   return (
     <div id="about" className="sectionAbout">
       <div className="flex flex-col gap-10 md:gap-16">

@@ -1,33 +1,33 @@
 import React from "react";
 
-export default function SectionProject() {
+export default function ProjectSection() {
   const projects = [
     {
       title: "Audiophile Website",
       description:
-        "A sleek and responsive personal portfolio built with Next.js and Tailwind CSS.",
-      tech: ["Next.js", "Tailwind CSS"],
+        "A visually engaging and responsive website designed for showcasing audio gear products. The site features a clean, modern layout with intuitive navigation and detailed product pages, making it ideal for e-commerce-style product displays. Built to reflect a premium brand feel with smooth interactions.",
+      tech: ["Next.js", "Zustand", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/audiophile-website",
       live: "https://drixel-audiophile-website.vercel.app/",
-      image: <img src="./audiophile.png" alt="audiophile" />,
+      image: <div className="projectOne"><div></div></div>,
     },
     {
       title: "Product-List-With-Cart",
       description:
-        "A minimal e-commerce site with add-to-cart, product pages, and Zustand for state management.",
-      tech: ["React", "Zustand", "Tailwind CSS"],
+        "A functional e-commerce interface that includes product listings, real-time cart updates, and user-friendly item interactions. This project demonstrates frontend state management, dynamic rendering, and a seamless shopping experience from product view to cart total.",
+      tech: ["React", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/Product-Lists-with-Cart",
       live: "https://mypher-product-lists-with-cart.netlify.app/",
-      image: <img src="./product-list-with-cart.png" alt="product-list-with-cart" />,
+      image: <div className="projectTwo"><div></div></div>,
     },
     {
       title: "Rock-Paper-Scissors",
       description:
-        "An interactive landing page with smooth transitions and animations.",
-      tech: ["React", "Framer Motion", "Tailwind CSS"],
+        "A simple, fun and interactive browser game that recreates the classic Rock-Paper-Scissors experience. It showcases my skills in crafting engaging UI and clean game mechanics.",
+      tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Abdulmuiz-Momodu/Rock-Paper-Scissors",
       live: "https://mypher-rock-paper-scissor.netlify.app/",
-      image: <img src="./rock-paper-scissors.png" alt="rock-paper-scissors" />,
+      image: <div className="projectThree"><div></div></div>,
     },
   ];
 
@@ -51,15 +51,13 @@ export default function SectionProject() {
             on recently.
           </p> */}
 
-          {/* <div className="grid gap-8 md:grid-cols-2"> */}
-          <div className="flex flex-col gap-24">
+          <div className="flex flex-col gap-12 md:gap-24">
             {projects.map((project, index) => (
-
-              <div key={index} className="flex">
+              <div key={index} className="flex flex-col md:flex-row lg:h-[25rem]">
                 <div className="projectImage">{project.image}</div>
 
-                <div className="w-[30%] flex items-center">
-                  <div className="projectContent flex flex-col items-end text-right gap-4">
+                <div className="md:w-[30%] flex items-center projectInfo">
+                  <div className="projectContent flex flex-col md:items-end md:text-right gap-4">
                     <h3 className="text-xl font-semibold mb-2">
                       {project.title}
                     </h3>
@@ -70,7 +68,7 @@ export default function SectionProject() {
                       {project.tech.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="text-[#a4a5b690] px-3 py-1 rounded-full text-sm"
+                          className="text-[#a4a5b690] rounded-full font-black text-sm"
                         >
                           {tech}
                         </span>
@@ -84,7 +82,11 @@ export default function SectionProject() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img className="w-5" src="./go-live.png" alt="go-live" />
+                        <img
+                          className="w-5"
+                          src="./go-live.png"
+                          alt="go-live"
+                        />
                       </a>
                       <a
                         href={project.github}
