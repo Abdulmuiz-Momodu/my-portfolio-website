@@ -6,7 +6,7 @@ export default function ProjectSection() {
       title: "Audiophile Website",
       description:
         "A visually engaging and responsive website designed for showcasing audio gear products. The site features a clean, modern layout with intuitive navigation and detailed product pages, making it ideal for e-commerce-style product displays. Built to reflect a premium brand feel with smooth interactions.",
-      tech: ["Next.js", "Zustand", "CSS", "Tailwind CSS"],
+      tech: ["Next.js", "Zustand", "Vanilla CSS", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/audiophile-website",
       live: "https://drixel-audiophile-website.vercel.app/",
       image: (
@@ -19,7 +19,7 @@ export default function ProjectSection() {
       title: "Product-List-With-Cart",
       description:
         "A functional e-commerce interface that includes product listings, real-time cart updates, and user-friendly item interactions. This project demonstrates frontend state management, dynamic rendering, and a seamless shopping experience from product view to cart total.",
-      tech: ["React", "Tailwind CSS"],
+      tech: ["React", "Vanilla CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/Product-Lists-with-Cart",
       live: "https://mypher-product-lists-with-cart.netlify.app/",
       image: (
@@ -37,6 +37,19 @@ export default function ProjectSection() {
       live: "https://mypher-rock-paper-scissor.netlify.app/",
       image: (
         <div className="projectThree">
+          <div></div>
+        </div>
+      ),
+    },
+    {
+      title: "Rest-Countries-API",
+      description:
+        "A simple, fun and interactive browser game that recreates the classic Rock-Paper-Scissors experience. It showcases my skills in crafting engaging UI and clean game mechanics.",
+      tech: ["Next.Js", "Vanilla CSS", "Tailwind CSS"],
+      github: "https://github.com/Abdulmuiz-Momodu/Rest-Countries-API",
+      live: "https://mypher-rock-paper-scissor.netlify.app/",
+      image: (
+        <div className="projectFour">
           <div></div>
         </div>
       ),
@@ -62,12 +75,12 @@ export default function ProjectSection() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row lg:h-[25rem]"
+                className="project-layout flex flex-col md:flex-row lg:h-[25rem]"
               >
                 <div className="projectImage">{project.image}</div>
 
                 <div className="md:w-[30%] flex items-center projectInfo">
-                  <div className="projectContent flex flex-col md:items-end md:text-right gap-4">
+                  <div className="projectContent flex flex-col gap-4">
                     <h3 className="text-xl font-semibold mb-2">
                       {project.title}
                     </h3>

@@ -27,7 +27,7 @@ export default function Header() {
 
         <div className="flex justify-between items-center text-[#CCD6F6]">
           <a href="/" className="cursor-pointer">
-            <img src="./my-logo.jpg" className="h-10 logo" alt="logo" />
+            <img src="./my-logo.jpg" className="h-8 md:h-10 logo" alt="logo" />
           </a>
 
           {/* Desktop menu */}
@@ -42,7 +42,7 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <div className="contactButton border-[1px] rounded-[3px] text-[#F2B880] font-medium border-[#F2B880] px-3 py-1">
+            <div className="contactButton border-[1px] rounded-[3px] text-[#F2B880] font-medium border-[#F2B880]">
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -56,9 +56,9 @@ export default function Header() {
             }}
             className="drawer-toggle z-[100] flex flex-col items-end gap-[5px] cursor-pointer md:hidden"
           >
-            <div className="bar1 bg-[#F2B880] h-0.5 w-8" />
-            <div className="bar2 bg-[#F2B880] h-0.5 w-7" />
-            <div className="bar3 bg-[#F2B880] h-0.5 w-6" />
+            <div className="bar1 bg-[#F2B880] h-0.5 w-7 md:w-8" />
+            <div className="bar2 bg-[#F2B880] h-0.5 w-6 md:w-7" />
+            <div className="bar3 bg-[#F2B880] h-0.5 w-5 md:w-6" />
           </button>
 
         </div>

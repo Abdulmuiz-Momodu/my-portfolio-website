@@ -7,12 +7,12 @@ export default function Contact() {
         <div className="w-fit flex flex-col items-center gap-10">
           <ul className="flex justify-around w-3xs md:w-fit md:flex-col md:gap-10">
             <li>
-              <a href="https://github.com/Abdulmuiz-Momodu">
+              <a href="https://github.com/Abdulmuiz-Momodu" target="_blank">
                 <div className="github socialLinks w-5 h-5"></div>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/muiz-momodu">
+              <a href="https://www.linkedin.com/in/muiz-momodu" target="_blank">
                 <div className="linkedin socialLinks w-5 h-5"></div>
               </a>
             </li>

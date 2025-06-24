@@ -1,4 +1,5 @@
 import React from "react";
+import DownloadResume from "../downloadResume/downloadResume";
 
 export default function HomeSection() {
   return (
@@ -17,9 +18,7 @@ export default function HomeSection() {
           Currently, I'm expanding into animation and micro-interaction to bring
           designs to life.
         </p>
-        <div className="explore border-[1px] rounded-[3px] text-[#F2B880] max-w-fit p-4 font-medium border-[#F2B880]">
-          <a href="#footer">Explore my Projects</a>
-        </div>
+        <DownloadResume/>
       </div>
     </section>
   );

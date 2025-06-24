@@ -1,6 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
 * {
   box-sizing: border-box;
@@ -61,27 +60,48 @@
 }
 .mail {
   width: 2rem;
-  transform: translate(-155px, 0px);
+  transform: translate(-180px, 0px);
+}
+.mail a {
+  transform: translate(0px, -3px);
+}
+.mail a:hover {
+  transform: translate(-3px, 0px);
+}
+.project-layout:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.project-layout:nth-child(1n) .projectContent {
+  align-items: flex-end;
+  margin-left: -10rem;
+  text-align: right;
+}
+.project-layout:nth-child(2n) .projectContent {
+  align-items: flex-start;
+  text-align: left;
+  z-index: 1;
+}
+.project-layout:nth-child(2n) .projectImage {
+  margin-left: -10rem;
 }
 .projectDescription {
   padding: 1.5rem;
   font-size: small;
-}
-.projectContent {
-  margin-left: -10rem;
 }
 .projectImage {
   width: 70%;
 }
 .projectOne,
 .projectTwo,
-.projectThree {
+.projectThree,
+.projectFour {
   width: 100%;
   height: 100%;
 }
 .projectOne div,
 .projectTwo div,
-.projectThree div {
+.projectThree div, 
+.projectFour div {
   width: 100%;
   height: 100%;
   background-color: #512e0aad;
@@ -99,9 +119,13 @@
 .projectThree div {
   background-image: url("/rock-paper-scissors-desktop.png");
 }
+.projectFour div {
+  background-image: url("/rest-countries-desktop.png");
+}
 .projectOne div:hover,
 .projectTwo div:hover,
-.projectThree div:hover {
+.projectThree div:hover,
+.projectFour div:hover {
   background-color: transparent;
 }
 .socialLinks {
@@ -109,6 +133,9 @@
   background-size: contain;
   background-position: center;
   cursor: pointer;
+}
+.socialLinks:hover {
+  transform: translate(0px, -3px);
 }
 .go-live {
   background-image: url("/go-live.png");
@@ -133,6 +160,9 @@
 }
 .whatsapp:hover {
   background-image: url("/whatsapp-hover.png");  
+}
+.footer {
+  padding-bottom: 1rem;
 }
 .bar1, .bar2, .bar3 {
   transition: 0.4s;
@@ -182,13 +212,15 @@
   }
   .projectOne div,
   .projectTwo div,
-  .projectThree div {
+  .projectThree div,
+  .projectFour div {
     background-color: transparent;
     background-image: none;
   }
   .projectOne,
   .projectTwo,
-  .projectThree {
+  .projectThree,
+  .projectFour {
     width: 100%;
     background-color: #1c1004;
     background-blend-mode: overlay;
@@ -204,6 +236,9 @@
   .projectThree {
     background-image: url("/rock-paper-scissors-tablet.png");
   }
+  .projectFour {
+    background-image: url("/rest-countries-tablet.png");
+  }
   .projectImage {
     width: 100%;
     height: 20rem;
@@ -212,6 +247,17 @@
     margin-left: 0;
     margin-top: -25rem;
   }
+  .project-layout:nth-child(1n) .projectContent {
+    margin-left: 0;
+    text-align: left;
+    align-items: start;
+  }
+  .project-layout:nth-child(2n) {
+    flex-direction: column;
+  }
+  .project-layout:nth-child(2n) .projectImage {
+    margin-left: 0;
+  }  
   .projectInfo {
     padding: 2rem;
   }
@@ -221,6 +267,9 @@
   }
 }
 @media screen and (max-width: 425px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
   .sectionHome,
   .sectionAbout,
   .sectionskills,
@@ -249,5 +298,8 @@
   }
   .projectThree {
     background-image: url("/rock-paper-scissors-mobile.png");
+  }
+  .projectFour {
+    background-image: url("/rest-countries-mobile.png");
   }
 }
