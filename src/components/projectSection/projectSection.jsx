@@ -44,10 +44,10 @@ export default function ProjectSection() {
     {
       title: "Rest-Countries-API",
       description:
-        "A simple, fun and interactive browser game that recreates the classic Rock-Paper-Scissors experience. It showcases my skills in crafting engaging UI and clean game mechanics.",
+        "A responsive web application that allows users to browse, search, and filter through a comprehensive list of countries. The app displays each country’s essential information including flag, name, population, region, and capital. Users can filter countries by region or search by name using an intuitive UI.",
       tech: ["Next.Js", "Vanilla CSS", "Tailwind CSS"],
       github: "https://github.com/Abdulmuiz-Momodu/Rest-Countries-API",
-      live: "https://mypher-rock-paper-scissor.netlify.app/",
+      live: "https://rest-countries-api-mauve-five.vercel.app/",
       image: (
         <div className="projectFour">
           <div></div>
